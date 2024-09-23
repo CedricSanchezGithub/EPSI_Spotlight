@@ -1,6 +1,7 @@
 
 import DefaultLayout from "@/layouts/default";
 import { Card, CardBody, CardHeader } from "@nextui-org/card";
+import { Divider } from "@nextui-org/divider";
 import {Image} from "@nextui-org/image";
 import { Link } from "@nextui-org/link";
 
@@ -25,6 +26,18 @@ export default function IndexPage() {
               <CardHeader>
                 <h2 className={"uppercase font-bold"}>Mon Actualité</h2>
               </CardHeader>
+                <Divider className="my-4" />
+              <CardBody className={'items-center'}>
+                <iframe
+                    width="560"
+                    height="315"
+                    src="https://www.youtube.com/embed/ZjrQ11eSsJY"
+                    title="YouTube video player"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowFullScreen
+                ></iframe>
+
+              </CardBody>
             </Card>
             <Card className="py-4 w-72">
               <CardHeader><h2 className={"uppercase font-bold"}>
