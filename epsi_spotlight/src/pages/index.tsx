@@ -1,35 +1,12 @@
-import { Card, CardBody, CardHeader } from "@nextui-org/card";
-import { Divider } from "@nextui-org/divider";
-import { Image } from "@nextui-org/image";
-import { Link } from "@nextui-org/link";
+import {Card, CardBody, CardHeader} from "@nextui-org/card";
+import {Divider} from "@nextui-org/divider";
+import {Image} from "@nextui-org/image";
+import {Link} from "@nextui-org/link";
 
 import DefaultLayout from "@/layouts/default";
-import {Input} from "@nextui-org/input";
-import {Kbd} from "@nextui-org/kbd";
-import {SearchIcon} from "@/components/icons.tsx";
+import Filter from "@/components/filter/filter.tsx";
 
 export default function IndexPage() {
-
-  const searchInput = (
-      <Input
-          aria-label="Search"
-          classNames={{
-            inputWrapper: "bg-default-100",
-            input: "text-sm",
-          }}
-          endContent={
-            <Kbd className="hidden lg:inline-block" keys={["command"]}>
-              K
-            </Kbd>
-          }
-          labelPlacement="outside"
-          placeholder="Search..."
-          startContent={
-            <SearchIcon className="text-base text-default-400 pointer-events-none flex-shrink-0" />
-          }
-          type="search"
-      />
-  );
 
   return (
       <DefaultLayout>
@@ -48,9 +25,9 @@ export default function IndexPage() {
               </CardBody>
             </Card>
             <div>
-              <div className={"mb-4 mx-4"}>{searchInput}</div>
+              {/*<div className={"mb-4 mx-4"}>{searchInput}</div>*/}
+                <Filter />
               <Card className="p-4 mx-4">
-
                 <CardHeader>
                   <h2 className={"uppercase font-bold"}>Mon Actualité</h2>
                 </CardHeader>
