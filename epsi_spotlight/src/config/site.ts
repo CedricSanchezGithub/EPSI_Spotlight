@@ -16,6 +16,10 @@ export const siteConfig = {
       label: "Environnement",
       href: "/environnement",
     },
+    {
+      label: "Connexion",
+      href: "/login",
+    },
   ],
   navMenuItems: [
     {
