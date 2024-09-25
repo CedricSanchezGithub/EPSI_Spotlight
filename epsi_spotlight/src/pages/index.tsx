@@ -5,8 +5,18 @@ import Filter from "@/components/filter/filter.tsx";
 import LinkCards from "@/components/index/linkCards.tsx";
 import CampusLifeCard from "@/components/campuslife/campuslife.tsx";
 import IndexProfile from "@/components/profile/indexProfile.tsx";
+import {useState} from "react";
 
 export default function IndexPage() {
+
+  const [selectedFilters, setSelectedFilters] = useState([]);
+
+  // @ts-ignore
+  const handleFilterChange = (filters) => {
+    setSelectedFilters(filters);
+    console.log("Filtres sélectionnés:", filters);
+  };
+
 
   return (
      <DefaultLayout>
@@ -17,11 +27,11 @@ export default function IndexPage() {
                 <IndexProfile />
                 </CardHeader>
               <CardBody className="overflow-visible py-2">
-                <Filter/>
+                <Filter onFilterChange={handleFilterChange} />
               </CardBody>
             </Card>
             <div>
-              <LinkCards/>
+              <LinkCards selectedFilters={selectedFilters} />
             </div>
             <CampusLifeCard />
           </div>

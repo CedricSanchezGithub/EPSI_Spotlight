@@ -1,18 +1,28 @@
 import {Card, CardHeader} from '@nextui-org/card';
 import {dataLinks} from './dataLinks.ts';
-import {useState} from 'react';
+import {useMemo, useState} from 'react';
 import {Chip} from "@nextui-org/chip";
 
 const CARDS_PER_PAGE = 4;
 
-const LinkCards = () => {
+// @ts-ignore
+const LinkCards = ({ selectedFilters }) => {
     const [currentPage, setCurrentPage] = useState(1);
+
+    const filteredCards = useMemo(() => {
+        if (selectedFilters.length === 0) {
+            return dataLinks;
+        }
+        return dataLinks.filter(card =>
+            card.tags.some(tag => selectedFilters.includes(tag))
+        );
+    }, [selectedFilters]);
+
+    const totalPages = Math.ceil(filteredCards.length / CARDS_PER_PAGE);
 
     const indexOfLastCard = currentPage * CARDS_PER_PAGE;
     const indexOfFirstCard = indexOfLastCard - CARDS_PER_PAGE;
-    const currentCards = dataLinks.slice(indexOfFirstCard, indexOfLastCard);
-
-    const totalPages = Math.ceil(dataLinks.length / CARDS_PER_PAGE);
+    const currentCards = filteredCards.slice(indexOfFirstCard, indexOfLastCard);
 
     const nextPage = () => {
         setCurrentPage(prev => Math.min(prev + 1, totalPages));

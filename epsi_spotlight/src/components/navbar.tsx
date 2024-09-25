@@ -13,8 +13,14 @@ import clsx from "clsx";
 import {siteConfig} from "@/config/site";
 import {ThemeSwitch} from "@/components/theme-switch";
 import {GithubIcon,} from "@/components/icons";
+import LoginButton from "@/components/login/loginButton.tsx";
+import LogoutButton from "@/components/login/logoutButton.tsx";
+import {useAuth0} from "@auth0/auth0-react";
+
+
 
 export const Navbar = () => {
+const { isAuthenticated } = useAuth0();
 
     return (
         <NextUINavbar maxWidth="xl"  position="sticky">
@@ -34,6 +40,8 @@ export const Navbar = () => {
                             </Link>
                         </NavbarItem>
                     ))}
+                    {!isAuthenticated && <LoginButton />}
+                    {isAuthenticated && <LogoutButton />}
                 </div>
             </NavbarContent>
 

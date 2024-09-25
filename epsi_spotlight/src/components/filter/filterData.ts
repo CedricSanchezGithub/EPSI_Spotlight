@@ -26,5 +26,13 @@ export const filterData = [
     {
         id: 7,
         filter: "LYON"
+    },
+    {
+        id: 8,
+        filter: "BDE"
+    },
+    {
+        id: 9,
+        filter: "talent"
     }
-]
+];
