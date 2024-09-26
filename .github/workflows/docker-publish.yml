@@ -3,7 +3,7 @@ name: Docker Build and Push  # Nom de l'action GitHub
 on:  # Déclencheurs de l'action
   push:  # Sur les actions de push
     branches:  # Pour les branches spécifiques
-      - master  # Branche master
+      - main  # Branche master
   workflow_dispatch:  # Permet le déclenchement manuel
 
 jobs:  # Définition des jobs
