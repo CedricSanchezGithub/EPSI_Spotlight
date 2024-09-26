@@ -5,7 +5,6 @@ import {Chip} from "@nextui-org/chip";
 
 const CARDS_PER_PAGE = 4;
 
-// @ts-ignore
 const LinkCards = ({ selectedFilters }) => {
     const [currentPage, setCurrentPage] = useState(1);
 
