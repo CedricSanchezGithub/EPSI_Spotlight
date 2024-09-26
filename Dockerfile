@@ -14,7 +14,7 @@ COPY next-portfolio/package*.json ./
 RUN npm install
 
 # Copier le reste des fichiers de l'application dans le répertoire de travail
-COPY next-portfolio .
+COPY epsi_spotlight .
 
 # Construire l'application Next.js pour la production
 RUN npm run build
