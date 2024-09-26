@@ -1,6 +1,5 @@
-import { title } from "@/components/primitives";
 import DefaultLayout from "@/layouts/default";
-import { Card, CardFooter, Image, Button, CardHeader } from "@nextui-org/react";
+import {Button, Card, CardFooter, CardHeader, Image} from "@nextui-org/react";
 
 export default function InfosUtiles() {
   return (
