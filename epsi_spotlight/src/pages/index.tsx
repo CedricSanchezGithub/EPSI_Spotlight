@@ -11,6 +11,7 @@ export default function IndexPage() {
 
   const [selectedFilters, setSelectedFilters] = useState([]);
 
+  // @ts-ignore
   const handleFilterChange = (filters) => {
     setSelectedFilters(filters);
     console.log("Filtres sélectionnés:", filters);
