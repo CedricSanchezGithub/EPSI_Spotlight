@@ -33,6 +33,10 @@ export const filterData = [
     },
     {
         id: 9,
-        filter: "talent"
+        filter: "TALENT"
+    },
+    {
+        id: 9,
+        filter: "SPORT"
     }
 ];

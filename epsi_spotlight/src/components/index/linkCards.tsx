@@ -38,8 +38,26 @@ const LinkCards = ({ selectedFilters }) => {
                 <h2 className="uppercase font-bold">L'actualité des campus</h2>
             </CardHeader>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+
+                {/*<Card className="w-full max-w-[560px] mx-auto overflow-hidden shadow-lg">*/}
+                {/*    <div className={"flex items-center"}>*/}
+
+                {/*        <h3 className="text-md font-semibold p-3">Amine </h3>*/}
+                {/*        <Image className={"w-3/4"} src={"https://i.ibb.co/HnD4G7C/Capture-d-cran-2024-09-26-150506.png"*/}
+                {/*        }></Image>*/}
+                {/*    </div>*/}
+                {/*    <div className="aspect-video">*/}
+                {/*        <Image*/}
+                {/*            src={"https://i.ibb.co/6RQYXLq/Capture-d-cran-2024-09-26-145708.png"}*/}
+                {/*            title="YouTube video player"*/}
+                {/*            className="w-full h-full rounded-lg">*/}
+                {/*        </Image>*/}
+                {/*    </div>*/}
+                {/*</Card>*/}
                 {currentCards.map((item) => (
+
                     <div key={item.id} className="border p-3 rounded-lg">
+
                         <h3 className="text-md font-semibold p-3">{item.utilisateur}</h3>
 
                         <Card className="w-full max-w-[560px] mx-auto overflow-hidden shadow-lg">

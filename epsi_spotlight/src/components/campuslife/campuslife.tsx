@@ -29,7 +29,6 @@ const CampusLifeCard = () => {
                             <Link
                                 isExternal
                                 href={link.href}
-                                showAnchorIcon
                                 className="block truncate pr-8 text-left"
                             >
                                 {link.text}
