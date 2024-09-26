@@ -8,7 +8,7 @@ LABEL authors="groupe 25"
 WORKDIR /app
 
 # Copier les fichiers package.json et package-lock.json dans le répertoire de travail
-COPY next-portfolio/package*.json ./
+COPY epsi_spotlight/package*.json ./
 
 # Installer les dépendances Node.js spécifiées dans package.json
 RUN npm install
