@@ -1,36 +1,26 @@
-# Étape de construction
-FROM node:18-alpine AS builder
+# Utilise l'image officielle de Node.js basée sur Alpine Linux
+FROM node:20-alpine
 
+# Auteur de l'image Docker
+LABEL authors="groupe 25"
+
+# Définir le répertoire de travail dans le conteneur
 WORKDIR /app
 
-# Copier les fichiers package.json et package-lock.json
+# Copier les fichiers package.json et package-lock.json dans le répertoire de travail
 COPY epsi_spotlight/package*.json ./
 
-# Installer les dépendances
-RUN npm ci
+# Installer les dépendances Node.js spécifiées dans package.json
+RUN npm install
 
-# Copier le reste des fichiers de l'application
+# Copier le reste des fichiers de l'application dans le répertoire de travail
 COPY epsi_spotlight .
 
-# Construire l'application en ignorant temporairement les erreurs TypeScript
-RUN npm run build || true
+# Construire l'application Vite pour la production
+RUN npm run build
 
-# Étape de production
-FROM node:18-alpine AS runner
-
-WORKDIR /app
-
-ENV NODE_ENV production
-
-# Copier les fichiers nécessaires depuis l'étape de construction
-COPY --from=builder /app/next.config.js ./
-COPY --from=builder /app/public ./public
-COPY --from=builder /app/.next ./.next
-COPY --from=builder /app/node_modules ./node_modules
-COPY --from=builder /app/package.json ./package.json
-
-# Exposer le port sur lequel l'application s'exécute
+# Exposer le port sur lequel l'application Vite va tourner
 EXPOSE 3030
 
-# Démarrer l'application
-CMD ["npm", "start"]
+# Commande par défaut pour démarrer l'application Vite en mode production
+CMD ["npm", "run", "preview"]
