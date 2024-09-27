@@ -10,13 +10,13 @@ const CampusLifeCard = () => {
         <Card className="w-72">
             <CardHeader className={"p-0 "}>
 
-                    <Image
-                        alt="Vie au campus"
-                        className="object-cover"
-                        src="./campus.png"
-                        width={"100%"}
-                        height={"100%"}
-                    />
+                <Image
+                    alt="Vie au campus"
+                    className="object-cover"
+                    src="./campus.png"
+                    width={"100%"}
+                    height={"100%"}
+                />
             </CardHeader>
             <CardBody className="overflow-hidden">
                 <h3 className="text-lg font-bold mb-2 uppercase tracking-wide">
@@ -36,6 +36,7 @@ const CampusLifeCard = () => {
                         </div>
                     ))}
                 </div>
+                <Image src={'./bde.png'} className={"mt-4"}></Image>
             </CardBody>
         </Card>
     );
