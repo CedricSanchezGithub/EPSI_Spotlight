@@ -1,5 +1,5 @@
 # Utilise l'image officielle de Node.js basée sur Alpine Linux
-FROM arm64v8/node:20-alpine
+FROM node:20-alpine
 
 # Auteur de l'image Docker
 LABEL authors="groupe 25"
