@@ -38,5 +38,13 @@ export const filterData = [
     {
         id: 9,
         filter: "SPORT"
+    },
+    {
+        id: 10,
+        filter: "2024"
+    },
+    {
+        id: 10,
+        filter: "WORKSHOP"
     }
 ];

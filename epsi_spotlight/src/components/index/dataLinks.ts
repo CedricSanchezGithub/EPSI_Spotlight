@@ -1,9 +1,9 @@
 export const dataLinks = [
     {
         id: 1,
-        lien: "https://www.youtube.com/embed/LzvJwGMwPmU",
-        utilisateur: "Emilie Delmos",
-        tags: ["EPSI", "SPORT", "MARSEILLE"],
+        lien: "https://www.youtube.com/watch?v=URvs2OOPaSI",
+        utilisateur: "Groupe25",
+        tags: ["EPSI", "WIS", "WORKSHOP", "2024"],
     },
     {
         id: 2,
