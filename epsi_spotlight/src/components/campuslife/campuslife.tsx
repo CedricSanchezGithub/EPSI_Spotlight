@@ -2,6 +2,7 @@ import {Card, CardBody, CardHeader} from "@nextui-org/card";
 import {Link} from "@nextui-org/link";
 import {Image} from "@nextui-org/image";
 import {links} from "./campusLifeData.ts"
+import {Divider} from "@nextui-org/react";
 
 const CampusLifeCard = () => {
 
@@ -25,7 +26,8 @@ const CampusLifeCard = () => {
                 <div className="space-y-2">
                     {links.map((link, index) => (
                         <div key={index} className="relative overflow-hidden whitespace-nowrap">
-                            <div className="absolute right-0 top-0 h-full w-8 bg-gradient-to-l from-background to-transparent z-10"></div>
+                            <div
+                                className="absolute right-0 top-0 h-full w-8 bg-gradient-to-l from-background to-transparent z-10"></div>
                             <Link
                                 isExternal
                                 href={link.href}
@@ -36,6 +38,11 @@ const CampusLifeCard = () => {
                         </div>
                     ))}
                 </div>
+                <Divider className="my-4" />
+
+                <h3 className="text-lg font-bold uppercase tracking-wide">
+                    BDE
+                </h3>
                 <Image src={'./bde.png'} className={"mt-4"}></Image>
             </CardBody>
         </Card>

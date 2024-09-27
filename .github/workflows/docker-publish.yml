@@ -28,7 +28,7 @@ jobs:  # Définition des jobs
         with:  # Paramètres de construction et de push
           context: .  # Contexte de construction Docker (le répertoire courant)
           push: true  # Indique que l'image doit être poussée vers le registre Docker
-          platforms: linux/amd64  # Plateforme cible pour l'image Docker
+          platforms: linux/arm64  # Plateforme cible pour l'image Docker
           tags: |
             cedsanc/spotlight:latest
             cedsanc/spotlight:${{ github.run_number }}-${{ github.sha }}
