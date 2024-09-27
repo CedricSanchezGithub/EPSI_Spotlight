@@ -1,7 +1,7 @@
 export const dataLinks = [
     {
         id: 1,
-        lien: "https://www.youtube.com/watch?v=URvs2OOPaSI",
+        lien: "https://www.youtube.com/embed/URvs2OOPaSI",
         utilisateur: "Groupe25",
         tags: ["EPSI", "WIS", "WORKSHOP", "2024"],
     },
